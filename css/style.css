@@ -5,11 +5,16 @@
     color: #000;
     list-style: none;
     text-decoration: none;
+    font-family: "Alegreya", serif;
   }
   
   body{
       overflow-x: hidden;
       height: 100%;
+  }
+
+  p{
+    font-weight: 200;
   }
   .bloque-ns-100{
     width: 100%;
@@ -211,7 +216,7 @@ color: #fff;}
     border: 1px solid #fff;
    padding: 0 44px;
     margin-bottom: 25px;
-    font-size: 24px;
+    font-size: 20px;
     color: #fff;
 
 }
@@ -255,13 +260,18 @@ form.flex{
 }
 .bloque-2 .bloque-2-img{
   margin-right: 24px;
+  align-self: center;
 }
 
 .bloque-2 h3{
   font-size: 36px;
   line-height: 130%;
   color: #863440;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+.bloque-2 .bloque-ns{
+  margin-bottom: 0;
 }
 
 .bloque-2 .bloque-2-info{
@@ -271,7 +281,7 @@ form.flex{
 .bloque-2 .bloque-2-info p,.bloque-2 .bloque-2-info b{
   color: #fff;
   font-size: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   line-height: 130%;
 }
 
@@ -301,7 +311,7 @@ form.flex{
 
 .bloque-3 h2{
   font-size: 40px;
-    width: 60%;
+    width: 50%;
     position: relative;
     margin: 0 auto;
     margin-bottom: 16px;
@@ -395,14 +405,16 @@ form.flex{
 
 .bloque-5 .porcentaje-50 form.flex input ,.bloque-5 .porcentaje-50 form.flex textarea{
   border: 1px solid #000;
+  color: #000;
 }
 
 .bloque-5 .porcentaje-50 form.flex input::placeholder ,.bloque-5 .porcentaje-50 form.flex textarea::placeholder{
   color: #000;
 }
 
-.bloque-5 input.enviar{
+.bloque-5 .porcentaje-50 form.flex input.enviar{
   padding: 0;
+  color:#fff;
 }
 
 .bloque-5 .datos{
@@ -469,6 +481,29 @@ form.flex{
 
 footer{
   padding: 80px 64px;
+  position: relative;
+}
+
+footer .wps{
+  position: fixed;
+bottom: 40px;
+right: 20px;
+}
+
+.wps img{
+  width: 100px;
+}
+.wps:after{
+  position: absolute;
+  display: block;
+  content: "";
+  width: 55px;
+  height: 55px;
+  background: #fff;
+  top: 22px;
+  border-radius: 50%;
+  left: 25px;
+  z-index: -1;
 }
 
 footer .flex.menu{
@@ -577,12 +612,35 @@ footer span{
       .bloque-2 .bloque-2-img{
         margin-right: 0;
       }
+      .wps img{
+        width: 80px;
+      }
+      .wps:after{
+        position: absolute;
+        display: block;
+        content: "";
+        width: 45px;
+        height: 45px;
+        background: #fff;
+        top: 17px;
+        border-radius: 50%;
+        left: 20px;
+        z-index: -1;
+      }
+
       }
 
       @media screen and (max-width:730px){
         .bloque-ns-100.flex.bloque-1 h2{
           font-size: 55px;
           width: 100%;
+        }
+        .bloque-ns-100.flex.bloque-1 .porcentaje-50.info{
+          padding-top: 40px;
+          padding-bottom: 40px;
+        }
+        .bloque-1 form.flex{
+          padding: 40px 0;
         }
         .bloque-3 .grilla .col-8 {
           grid-column: span 24;
@@ -603,5 +661,33 @@ footer span{
         }
         .bloque-3 h2,.bloque-4 h2,.bloque-5 h2{
           font-size: 35px;
+          width: 94%;
+        }
+
+        .bloques-1-por-2.flex {
+          margin: 15% 0;
+          
+        }
+        .bloque-ns-100.flex.bloque-1 .porcentaje-50{
+          border-radius: 0;
+        }
+        .bloque-ns-100.flex.bloque-1 .porcentaje-50.info p{
+          font-size: 18px;
+          padding: 0 10px;
+        }
+        .bloque-5{ 
+          border-radius: 0;
+        }
+
+        .bloque-5 .porcentaje-50 form.flex input, .bloque-5 .porcentaje-50 form.flex textarea{
+          width: 100%;
+        }
+
+        footer{
+          padding: 0px 24px 80px;
+        }
+        footer form.flex {
+          align-items: flex-start;
+          flex-direction: column;
         }
       }
